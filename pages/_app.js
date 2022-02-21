@@ -3,8 +3,6 @@ import Router from "next/router";
 import Head from "next/head";
 import NProgress from "nprogress";
 import { ChakraProvider } from "@chakra-ui/provider";
-import { ColorModeProvider } from '@chakra-ui/core'
-
 import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
@@ -25,13 +23,9 @@ function MyApp({ Component, pageProps }) {
       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css' integrity='sha512-42kB9yDlYiCEfx2xVwq0q7hT4uf26FUgSIZBK8uiaEnTdShXjwr8Ip1V4xGJMg3mHkUt9nNuTDxunHF0/EgxLQ==' crossOrigin='anonymous' referrerPolicy='no-referrer' />
       </Head>
       <ChakraProvider>
-        <ColorModeProvider options={{
-        useSystsemColorMode: true
-      }}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
-        </ColorModeProvider>
       </ChakraProvider>
     </>
   );
