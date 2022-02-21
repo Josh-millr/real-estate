@@ -8,7 +8,7 @@ export default function Document() {
       <Head />
       <body>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} options={{
-        useSystsemColorMode: true
+        useSystemColorMode: true
       }}/>
         <Main />
         <NextScript />
