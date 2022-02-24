@@ -1,10 +1,24 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Box, Flex, Text, Avatar } from "@chakra-ui/react";
-import { FaBed, FaBath } from "react-icons/fa";
-import { BsGridFill } from "react-icons/bs";
-import { GoVerified } from "react-icons/go";
-import millify from "millify";
+import {
+  Link,
+  Image,
+  Flex,
+  avater as Avatar,
+  GoVerified,
+  BsGridFill,
+  FaBed,
+  FaBath,
+  millify,
+  Box,
+  Text,
+} from "../utils/exports";
+
+// import Link from "next/link";
+// import Image from "next/image";
+// import { Box, Flex, Text, Avatar } from "@chakra-ui/react";
+// import { FaBed, FaBath } from "react-icons/fa";
+// import { BsGridFill } from "react-icons/bs";
+// import { GoVerified } from "react-icons/go";
+// import millify from "millify";
 
 import DefaultImage from "../assets/images/fpxd2x9w.bmp";
 
@@ -53,16 +67,17 @@ const Property = ({
           <Box>
             <Avatar size="sm" src={agency?.logo?.url} />
           </Box>
-          </Flex>
-          <Flex
-            alignItems="center"
-            p="1"
-            justifyContent="space-between"
-            w="250px"
-            color="blue.400"
-          >
-            {rooms} <FaBed /> | {bath} <FaBath /> | {millify(area)}sqtr <BsGridFill />
-          </Flex>
+        </Flex>
+        <Flex
+          alignItems="center"
+          p="1"
+          justifyContent="space-between"
+          w="250px"
+          color="blue.400"
+        >
+          {rooms} <FaBed /> | {bath} <FaBath /> | {millify(area)}sqtr{" "}
+          <BsGridFill />
+        </Flex>
         <Text fontSize="lg">
           {title.length > 30 ? `${title.substring(0, 30)}...` : title}
         </Text>

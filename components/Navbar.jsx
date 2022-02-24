@@ -1,5 +1,10 @@
-import Link from "next/link";
 import {
+  Link,
+  FcMenu,
+  FcHome,
+  FcAbout,
+  BsSearch,
+  FiKey,
   Menu,
   MenuButton,
   MenuList,
@@ -8,10 +13,7 @@ import {
   Flex,
   Box,
   Spacer,
-} from "@chakra-ui/react";
-import { FcMenu, FcHome, FcAbout } from "react-icons/fc";
-import { BsSearch } from "react-icons/bs";
-import { FiKey } from "react-icons/fi";
+} from "../utils/exports";
 
 const Navbar = () => {
   return (

@@ -1,12 +1,16 @@
-import { Box, Flex, Spacer, Text } from "@chakra-ui/layout";
-import { Avatar } from "@chakra-ui/avatar";
-import { FaBed, FaBath } from "react-icons/fa";
-import { BsGridFill } from "react-icons/bs";
-import { GoVerified } from "react-icons/go";
-import millify from "millify";
+import {
+  millify,
+  Avatar,
+  FaBed,
+  FaBath,
+  BsGridFill,
+  GoVerified,
+  baseUrl,
+  fetchApi,
+  ImageScrollbar
+} from "../../utils/exports";
 
-import { baseUrl, fetchApi } from "../../utils/fetchApi";
-import ImageScrollbar from "../../components/ImageScrollbar";
+import { Box, Flex, Spacer, Text } from "@chakra-ui/layout";
 
 const PropertyDetails = ({
   propertyDetails: {

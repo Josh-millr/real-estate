@@ -1,8 +1,4 @@
-import Head from "next/head";
-import { Box } from "@chakra-ui/react";
-
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import { head as Head, Box, Navbar, Footer } from "../utils/exports";
 
 const Layout = ({ children }) => (
   <>
