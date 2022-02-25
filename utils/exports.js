@@ -9,10 +9,10 @@ export { default as head } from "next/head";
 export { default as millify } from "millify";
 
 // Pages
-export { default as Property } from "../components/Property";
-export { default as SearchFilters } from "../components/SearchFilters";
-export { default as Navbar } from "../components/Navbar";
-export { default as Footer} from "../components/Footer";
+export { default as Property } from "../components/pattern/Property";
+export { default as SearchFilters } from "../components/pattern/SearchFilters";
+export { default as Navbar } from "../components/macro/Navbar";
+export { default as Footer} from "../components/macro/Footer";
 
 
 // Utils
@@ -20,8 +20,8 @@ export { fetchApi, baseUrl } from "./fetchApi";
 export { filterData } from "./filterData";
 
 // Components
-export { default as ImageScrollbar } from "../components/ImageScrollbar";
-export { default as Layout } from "../components/Layout";
+export { default as ImageScrollbar } from "../components/pattern/ImageScrollbar";
+export { default as Layout } from "../components/macro/Layout";
 export { default as NProgress } from "nprogress";
 export { Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Box, Text, Button, Spacer, Icon, Select, Input, Avatar as avater, Spinner, ColorModeScript, extendTheme } from "@chakra-ui/react";
 export { ChakraProvider } from "@chakra-ui/provider";
@@ -36,10 +36,12 @@ export { FaBed, FaBath,  FaArrowAltCircleLeft, FaArrowAltCircleRight } from "rea
 export { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 export { GoVerified } from "react-icons/go";
 export { FiKey } from "react-icons/fi";
+export { MenuLink } from "../components/micro/Links";
+export { Banner } from "../components/pattern/Banner";
 
 // Assets
 export { default as noresult } from "../assets/images/noresult.svg";
-
+export {default as DefaultImage} from "../assets/images/fpxd2x9w.bmp";
 
 // export { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 

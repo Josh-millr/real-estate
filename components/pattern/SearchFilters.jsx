@@ -16,7 +16,7 @@ import {
   Spinner,
   Icon,
   Button,
-} from "../utils/exports";
+} from "../../utils/exports";
 
 export default function SearchFilters() {
   const [filters] = useState(filterData);
@@ -29,7 +29,7 @@ export default function SearchFilters() {
   const searchProperties = (filterValues) => {
     const path = router.pathname;
     const { query } = router;
-
+    
     query[Object.keys(filterValues).toString()] =
       Object.values(filterValues).toString();
     router.push({ pathname: path, query: query });

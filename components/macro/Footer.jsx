@@ -1,4 +1,4 @@
-import { Box } from "../utils/exports";
+import { Box } from "../../utils/exports";
 
 const Footer = () => (
   <Box

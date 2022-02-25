@@ -1,4 +1,4 @@
-import { head as Head, Box, Navbar, Footer } from "../utils/exports";
+import { head as Head, Box, Navbar, Footer } from "../../utils/exports";
 
 const Layout = ({ children }) => (
   <>

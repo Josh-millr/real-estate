@@ -8,7 +8,7 @@ import {
   VisibilityContext,
   FaArrowAltCircleLeft,
   FaArrowAltCircleRight,
-} from "../utils/exports";
+} from "../../utils/exports";
 
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
@@ -49,18 +49,18 @@ export default function ImageSrollbar({ data }) {
       RightArrow={RightArrow}
       style={{ overflow: "hidden" }}
     >
-      {data.map((item) => (
+      {data.map(({id, url}) => (
         <Box
-          key={item.id}
+          key={id}
           width="910px"
-          itemId={item.id}
+          itemId={id}
           overflow="hidden"
           p="1"
         >
           <Image
             placeholder="blur"
-            blurDataURL={item.url}
-            src={item.url}
+            blurDataURL={url}
+            src={url}
             width={1000}
             height={500}
             sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px"

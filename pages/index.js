@@ -1,52 +1,10 @@
-import {
-  Link,
-  Image,
-  Flex,
-  Box,
-  Text,
-  Button,
-  fetchApi,
-  baseUrl,
-  Property,
-} from "../utils/exports";
+import { Flex, fetchApi, baseUrl, Property, Banner } from "../utils/exports";
 
-const Banner = ({
-  purpose,
-  title1,
-  title2,
-  desc1,
-  desc2,
-  imageUrl,
-  linkName,
-  buttonText,
-}) => {
-  return (
-    <Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
-      <Image src={imageUrl} width={500} height={300} alt="banner" />
-      <Box p="5">
-        <Text color="gray.500" fontSize="sm" fontWeight="medium">
-          {purpose}
-        </Text>
-        <Text fontSize="3xl" fontWeight="bold">
-          {title1}
-          <br />
-          {title2}
-        </Text>
-        <Text fontSize="lg" paddingTop="3" paddingBottom="3" color="gray.700">
-          {desc1}
-          <br />
-          {desc2}
-        </Text>
-        <Button fontSize="xl">
-          <Link href={linkName}>{buttonText}</Link>
-        </Button>
-      </Box>
-    </Flex>
-  );
-};
 export default function Home({ propertiesForSale, propertiesForRent }) {
+  const imageUrl = "https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
+  
   return (
-    <div className="">
+    <div>
       <Banner
         purpose="RENT A HOME"
         title1="Rental Homes for"
@@ -55,7 +13,7 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         desc2="and More"
         buttonText="Explore Rating"
         linkName="/search?purpose=for-rent"
-        imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
+        imageUrl={imageUrl}
       />
       <Flex flexWrap="wrap">
         {propertiesForRent.map((property) => (
@@ -70,7 +28,7 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         desc2="and More"
         buttonText="Explore Buying"
         linkName="/search?purpose=for-sale"
-        imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
+        imageUrl={imageUrl}
       />
       <Flex flexWrap="wrap">
         {propertiesForSale.map((property) => (
